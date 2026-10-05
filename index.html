@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Platform Ops Console — interactive cloud operations and observability demo." />
+  <title>Platform Ops Console</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">P</div>
+        <div><strong>Platform Ops Console</strong><span>cloud-operations</span></div>
+      </div>
+      <nav id="nav">
+        <button class="nav-item active" data-page="overview">Overview</button>
+        <button class="nav-item" data-page="services">Services</button>
+        <button class="nav-item" data-page="deployments">Deployments</button>
+        <button class="nav-item" data-page="incidents">Incidents</button>
+        <button class="nav-item" data-page="observability">Observability</button>
+      </nav>
+      <div class="sidebar-footer">
+        <span class="live-dot"></span> Demo · simulated telemetry
+        <small>Kubernetes · Prometheus · Grafana · OpenTelemetry</small>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><h1 id="page-title">Overview</h1><p id="page-subtitle">Platform health across clusters and services</p></div>
+        <div class="topbar-meta"><span class="status-pill healthy">● Systems operational</span><span id="clock"></span></div>
+      </header>
+      <section id="content"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
